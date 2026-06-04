@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sri Karpagavinayagar Pharmacy – Nanganallur, Chennai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --saffron:#D4800A;--saffron-light:#FDF3E3;--green:#1B6B3A;--green-light:#E8F5EE;
+  --cream:#FBF7F0;--border:#E8DDD0;--text:#2C1810;--muted:#7A6858;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text)}
+h1,h2,h3{font-family:'Libre Baskerville',serif}
+
+/* NAV */
+nav{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;position:sticky;top:0;z-index:100}
+.logo-area{display:flex;align-items:center;gap:14px}
+.logo-svg-wrap{width:56px;height:56px;flex-shrink:0}
+.logo-text h1{font-size:14.5px;color:var(--text);letter-spacing:0.2px;line-height:1.25;font-family:'Libre Baskerville',serif}
+.logo-text p{font-size:11px;color:var(--saffron);font-weight:600;margin-top:2px;letter-spacing:0.5px}
+.nav-links{display:flex;gap:20px}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;cursor:pointer;transition:color .2s}
+.nav-links a:hover{color:var(--saffron)}
+.nav-cta{background:var(--green);color:#fff;border:none;padding:9px 18px;border-radius:6px;font-size:13px;font-family:'DM Sans',sans-serif;cursor:pointer;font-weight:500;white-space:nowrap}
+.nav-cta:hover{background:#155C30}
+
+/* HERO */
+.hero{background:#fff;border-bottom:1px solid var(--border);display:flex;flex-direction:column;align-items:center;overflow:hidden}
+.hero-top{background:linear-gradient(160deg,#FDF3E3 0%,#FFF9F2 60%,#E8F5EE 100%);width:100%;padding:48px 24px 0;display:flex;flex-direction:column;align-items:center;text-align:center;border-bottom:1px solid var(--border)}
+.deity-frame{width:140px;height:160px;margin:0 auto 24px;position:relative}
+.deity-halo{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,#FFE082 0%,#FFC107 40%,transparent 70%);opacity:0.4}
+.hero-tag{display:inline-block;background:var(--saffron-light);color:var(--saffron);font-size:12px;padding:4px 16px;border-radius:20px;margin-bottom:16px;border:1px solid #EAC98A;font-weight:600;letter-spacing:0.7px}
+.hero h2{font-size:34px;line-height:1.3;color:var(--text);max-width:520px;margin:0 auto 12px}
+.hero h2 em{font-style:italic;color:var(--saffron)}
+.hero p{font-size:15px;color:var(--muted);max-width:440px;margin:0 auto 28px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.btn-primary{background:var(--saffron);color:#fff;border:none;padding:13px 28px;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;cursor:pointer;font-weight:600;transition:background .2s}
+.btn-primary:hover{background:#B8690A}
+.btn-secondary{background:#fff;color:var(--green);border:1.5px solid var(--green);padding:13px 28px;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;cursor:pointer;font-weight:600;transition:background .2s}
+.btn-secondary:hover{background:var(--green-light)}
+.phone-banner{background:var(--green);width:100%;padding:12px 24px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.phone-banner span{color:#fff;font-size:13px}
+.phone-banner strong{color:#9BC8B0;font-size:16px;letter-spacing:1.5px}
+
+/* SECTIONS */
+.section{padding:56px 24px;max-width:760px;margin:0 auto}
+.sec-label{font-size:11px;color:var(--saffron);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.sec-title{font-size:26px;color:var(--text);margin-bottom:8px}
+.sec-sub{font-size:14px;color:var(--muted);margin-bottom:32px;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.svc-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px 18px;transition:border-color .2s,transform .2s}
+.svc-card:hover{border-color:var(--saffron);transform:translateY(-3px)}
+.svc-icon{font-size:28px;margin-bottom:10px}
+.svc-card h3{font-size:14px;font-family:'DM Sans',sans-serif;font-weight:600;color:var(--text);margin-bottom:6px}
+.svc-card p{font-size:12.5px;color:var(--muted);line-height:1.6}
+
+/* WHY US */
+.why-section{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 24px}
+.why-inner{max-width:760px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;margin-top:32px}
+.why-item{text-align:center}
+.why-num{font-family:'Libre Baskerville',serif;font-size:34px;color:var(--saffron);line-height:1}
+.why-desc{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.5}
+
+/* ORDER FORM */
+.form-section{padding:56px 24px;max-width:720px;margin:0 auto}
+.form-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:36px}
+.form-card h2{font-size:22px;color:var(--text);margin-bottom:6px}
+.form-card .sub{font-size:13px;color:var(--muted);margin-bottom:28px;line-height:1.7}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-row.full{grid-template-columns:1fr}
+.fld label{font-size:12px;color:var(--muted);font-weight:600;display:block;margin-bottom:5px;letter-spacing:0.3px}
+.fld input,.fld select,.fld textarea{width:100%;font-size:13.5px;font-family:'DM Sans',sans-serif;padding:10px 14px;border:1px solid var(--border);border-radius:7px;background:#FAFAF8;color:var(--text);outline:none;transition:border-color .2s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(212,128,10,0.08)}
+.fld textarea{resize:vertical;min-height:90px}
+.upload-box{border:1.5px dashed var(--border);border-radius:8px;padding:24px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;background:var(--cream)}
+.upload-box:hover{border-color:var(--saffron);background:var(--saffron-light)}
+.upload-box p{font-size:12.5px;color:var(--muted);margin-top:6px}
+.submit-btn{width:100%;background:var(--saffron);color:#fff;border:none;padding:14px;border-radius:8px;font-size:15px;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;margin-top:20px;letter-spacing:0.3px;transition:background .2s}
+.submit-btn:hover{background:#B8690A}
+.success-msg{display:none;background:var(--green-light);border:1px solid #9BC8B0;border-radius:8px;padding:16px;font-size:14px;color:var(--green);margin-top:14px;text-align:center;line-height:1.6}
+
+/* CONTACT */
+.contact-strip{background:var(--green);padding:48px 24px;text-align:center}
+.contact-strip h2{font-family:'Libre Baskerville',serif;color:#fff;font-size:24px;margin-bottom:8px}
+.phone-highlight{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);border-radius:10px;padding:14px 36px;color:#fff;font-size:24px;font-weight:700;letter-spacing:3px;margin:18px 0 14px;font-family:'Libre Baskerville',serif}
+.contact-items{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-top:10px}
+.c-item{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.9);font-size:13.5px;max-width:210px;text-align:left;line-height:1.6}
+.c-item i{font-size:20px;color:#9BC8B0;flex-shrink:0;margin-top:2px}
+.maps-btn{display:inline-block;background:rgba(255,255,255,0.15);color:#fff;text-decoration:none;padding:10px 26px;border-radius:7px;font-size:13px;border:1px solid rgba(255,255,255,0.35);margin-top:24px;transition:background .2s}
+.maps-btn:hover{background:rgba(255,255,255,0.25)}
+
+/* FOOTER */
+footer{background:#1C1C1C;padding:28px 24px;text-align:center}
+footer p{font-size:12px;color:#888;line-height:2}
+footer strong{color:#aaa}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav{padding:0 14px;height:auto;flex-wrap:wrap;gap:8px;padding:10px 14px}
+  .nav-links{display:none}
+  .hero h2{font-size:24px}
+  .form-row{grid-template-columns:1fr}
+  .form-card{padding:22px 16px}
+  .phone-highlight{font-size:18px;letter-spacing:1.5px;padding:10px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo-area">
+    <div class="logo-svg-wrap">
+      <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+        <circle cx="28" cy="28" r="27" fill="#FDF3E3" stroke="#D4800A" stroke-width="1.5"/>
+        <circle cx="28" cy="22" r="13" fill="#FFE082" opacity="0.4"/>
+        <ellipse cx="28" cy="36" rx="11" ry="10" fill="#D4800A"/>
+        <ellipse cx="28" cy="22" rx="9" ry="8" fill="#E8963A"/>
+        <ellipse cx="18" cy="21" rx="4.5" ry="5.5" fill="#E8963A"/>
+        <ellipse cx="18" cy="21" rx="3" ry="3.5" fill="#FBBF72" opacity="0.7"/>
+        <ellipse cx="38" cy="21" rx="4.5" ry="5.5" fill="#E8963A"/>
+        <ellipse cx="38" cy="21" rx="3" ry="3.5" fill="#FBBF72" opacity="0.7"/>
+        <ellipse cx="24.5" cy="21" rx="1.5" ry="1.6" fill="#2C1810"/>
+        <ellipse cx="31.5" cy="21" rx="1.5" ry="1.6" fill="#2C1810"/>
+        <circle cx="24.8" cy="20.6" r="0.5" fill="#fff"/>
+        <circle cx="31.8" cy="20.6" r="0.5" fill="#fff"/>
+        <circle cx="28" cy="19" r="1" fill="#B8690A"/>
+        <path d="M28 25 Q24 30 25 33 Q26 36 29 34" fill="none" stroke="#B8690A" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M22 26 Q17 28 18 32" fill="none" stroke="#FFFDE7" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M17 32 Q14 35 15 39" fill="none" stroke="#D4800A" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="15" cy="40" r="2.5" fill="#E53935" opacity="0.8"/>
+        <path d="M39 32 Q42 28 41 25" fill="none" stroke="#D4800A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M39 36 Q43 38 42 42" fill="none" stroke="#D4800A" stroke-width="2.5" stroke-linecap="round"/>
+        <ellipse cx="42" cy="43" rx="2.5" ry="2" fill="#FFB300"/>
+        <path d="M17 36 Q28 40 39 36" fill="none" stroke="#FFD54F" stroke-width="1.2"/>
+        <path d="M20 16 L22 11 L24 15 L26 10 L28 14 L30 10 L32 15 L34 11 L36 16" fill="none" stroke="#D4800A" stroke-width="1.5" stroke-linejoin="round"/>
+        <rect x="21" y="15" width="14" height="3" rx="1.5" fill="#D4800A"/>
+        <path d="M26 17.5 L28 15.5 L30 17.5" fill="none" stroke="#fff" stroke-width="0.8"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <h1>Sri Karpagavinayagar<br>Pharmacy</h1>
+      <p>🙏 Nanganallur, Chennai</p>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-cta" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
+    <i class="ti ti-pill"></i> Order Medicines
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="hero-top">
+    <div class="deity-frame">
+      <div class="deity-halo"></div>
+      <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" width="140" height="163">
+        <circle cx="60" cy="52" r="42" fill="#FFE082" opacity="0.25"/>
+        <circle cx="60" cy="52" r="36" fill="none" stroke="#FFB300" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+        <ellipse cx="60" cy="100" rx="28" ry="26" fill="#D4800A"/>
+        <ellipse cx="60" cy="112" rx="22" ry="14" fill="#B8690A" opacity="0.6"/>
+        <ellipse cx="60" cy="52" rx="22" ry="20" fill="#E8963A"/>
+        <ellipse cx="35" cy="50" rx="11" ry="13" fill="#E8963A"/>
+        <ellipse cx="35" cy="50" rx="7" ry="9" fill="#FBBF72" opacity="0.6"/>
+        <ellipse cx="85" cy="50" rx="11" ry="13" fill="#E8963A"/>
+        <ellipse cx="85" cy="50" rx="7" ry="9" fill="#FBBF72" opacity="0.6"/>
+        <ellipse cx="53" cy="49" rx="3.5" ry="3.8" fill="#fff"/>
+        <ellipse cx="67" cy="49" rx="3.5" ry="3.8" fill="#fff"/>
+        <ellipse cx="53" cy="50" rx="2.2" ry="2.4" fill="#1A0A00"/>
+        <ellipse cx="67" cy="50" rx="2.2" ry="2.4" fill="#1A0A00"/>
+        <circle cx="53.8" cy="49.2" r="0.9" fill="#fff"/>
+        <circle cx="67.8" cy="49.2" r="0.9" fill="#fff"/>
+        <ellipse cx="60" cy="44" rx="2" ry="2.5" fill="#B8690A"/>
+        <path d="M57 42 L60 39 L63 42" fill="none" stroke="#fff" stroke-width="1"/>
+        <path d="M60 60 Q50 72 52 82 Q54 90 62 87" fill="none" stroke="#B8690A" stroke-width="4.5" stroke-linecap="round"/>
+        <ellipse cx="63" cy="89" rx="5" ry="4" fill="#FFB300"/>
+        <ellipse cx="63" cy="88" rx="3" ry="2" fill="#FFD54F" opacity="0.7"/>
+        <path d="M46 60 Q36 64 37 74" fill="none" stroke="#FFFDE7" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M37 74 L34 80" fill="none" stroke="#FFFDE7" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
+        <path d="M38 72 Q26 62 27 55" fill="none" stroke="#D4800A" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="27" cy="53" rx="5" ry="4" fill="#E8963A"/>
+        <path d="M82 72 Q94 62 92 55" fill="none" stroke="#D4800A" stroke-width="5" stroke-linecap="round"/>
+        <path d="M92 55 L96 46 L88 50" fill="#B8690A"/>
+        <path d="M38 88 Q28 94 30 102" fill="none" stroke="#D4800A" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="30" cy="104" r="5" fill="#E53935" opacity="0.9"/>
+        <circle cx="28" cy="102" r="3" fill="#EF9A9A" opacity="0.7"/>
+        <path d="M82 88 Q92 94 90 102" fill="none" stroke="#D4800A" stroke-width="4.5" stroke-linecap="round"/>
+        <ellipse cx="90" cy="104" rx="6" ry="4" fill="#8D6E63"/>
+        <path d="M34 88 Q60 96 86 88" fill="none" stroke="#FFD54F" stroke-width="2"/>
+        <path d="M40 93 Q60 100 80 93" fill="none" stroke="#FFB300" stroke-width="1.2" opacity="0.6"/>
+        <rect x="44" y="34" width="32" height="6" rx="3" fill="#D4800A"/>
+        <path d="M46 34 L48 26 L51 32 L54 23 L57 30 L60 22 L63 30 L66 23 L69 32 L72 26 L74 34" fill="none" stroke="#B8690A" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M46 34 L48 26 L51 32 L54 23 L57 30 L60 22 L63 30 L66 23 L69 32 L72 26 L74 34" fill="#D4800A" opacity="0.5"/>
+        <circle cx="60" cy="29" r="3" fill="#E53935"/>
+        <circle cx="60" cy="29" r="1.5" fill="#FFCDD2" opacity="0.6"/>
+        <circle cx="24" cy="50" r="3" fill="#FFD54F"/>
+        <circle cx="96" cy="50" r="3" fill="#FFD54F"/>
+        <path d="M42 66 Q60 72 78 66" fill="none" stroke="#FFD54F" stroke-width="1.5"/>
+        <circle cx="51" cy="69" r="1.5" fill="#FFD54F"/>
+        <circle cx="60" cy="71" r="2" fill="#FFD54F"/>
+        <circle cx="69" cy="69" r="1.5" fill="#FFD54F"/>
+        <text x="55" y="116" font-size="14" fill="#FFD54F" opacity="0.7" font-family="serif">ॐ</text>
+      </svg>
+    </div>
+    <div class="hero-tag">✦ ஸ்ரீ கர்பக விநாயகர் ✦</div>
+    <h2>Your Health, Our <em>Sacred</em> Responsibility</h2>
+    <p>Serving Thillaiganga Nagar &amp; Nanganallur with genuine medicines, expert guidance, and heartfelt care — blessed by Lord Karpaga Vinayagar.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
+        <i class="ti ti-pill"></i>&nbsp; Upload Prescription
+      </button>
+      <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <i class="ti ti-map-pin"></i>&nbsp; Find Us
+      </button>
+    </div>
+  </div>
+  <div class="phone-banner">
+    <i class="ti ti-phone-call" style="color:#9BC8B0;font-size:20px"></i>
+    <span>Call us anytime:</span>
+    <strong>63792 51348</strong>
+    <span style="opacity:0.5">|</span>
+    <i class="ti ti-brand-whatsapp" style="color:#9BC8B0;font-size:20px"></i>
+    <span>WhatsApp orders welcome</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+  <div class="sec-label">What We Offer</div>
+  <h2 class="sec-title">Complete Pharmacy Services</h2>
+  <p class="sec-sub">Everything you need for your health and wellness, all under one roof in Nanganallur.</p>
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-icon">💊</div>
+      <h3>Prescription Medicines</h3>
+      <p>All branded &amp; generic drugs dispensed accurately with expert pharmacist guidance.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🌿</div>
+      <h3>Ayurvedic &amp; Herbal</h3>
+      <p>Natural remedies and traditional herbal products for holistic wellness.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🩺</div>
+      <h3>Health Equipment</h3>
+      <p>BP monitors, glucometers, thermometers, and surgical supplies.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">👶</div>
+      <h3>Baby &amp; Mother Care</h3>
+      <p>Infant nutrition, baby care products, and maternity essentials.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">💉</div>
+      <h3>Vitamins &amp; Supplements</h3>
+      <p>Multivitamins, protein supplements, and immunity boosters.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🚚</div>
+      <h3>Home Delivery</h3>
+      <p>Quick delivery to Nanganallur, Thillaiganga Nagar &amp; nearby areas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<div class="why-section">
+  <div class="why-inner">
+    <div style="text-align:center">
+      <div class="sec-label">Why Choose Us</div>
+      <h2 class="sec-title">Trusted by the Community</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">20+</div>
+        <div class="why-desc">Years serving Nanganallur families</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">100%</div>
+        <div class="why-desc">Genuine, licensed medicines only</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">5000+</div>
+        <div class="why-desc">Products always in stock</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">⭐ 4.8</div>
+        <div class="why-desc">Google rated by happy customers</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER FORM -->
+<div class="form-section" id="order">
+  <div class="form-card">
+    <h2>Order Medicines / Upload Prescription</h2>
+    <p class="sub">Fill in your details. Our pharmacist will call you on <strong style="color:var(--saffron)">63792 51348</strong> to confirm the order and arrange delivery or pickup.</p>
+    <div class="form-row">
+      <div class="fld">
+        <label>Full Name *</label>
+        <input type="text" id="f-name" placeholder="e.g. Ramesh Kumar"/>
+      </div>
+      <div class="fld">
+        <label>Mobile Number *</label>
+        <input type="tel" id="f-phone" placeholder="+91 98765 43210"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="fld">
+        <label>Email Address</label>
+        <input type="email" id="f-email" placeholder="Optional"/>
+      </div>
+      <div class="fld">
+        <label>Delivery Area *</label>
+        <select id="f-area">
+          <option value="">Select area</option>
+          <option>Nanganallur</option>
+          <option>Thillaiganga Nagar</option>
+          <option>Pazhavanthangal</option>
+          <option>Alandur</option>
+          <option>Adambakkam</option>
+          <option>Store Pickup</option>
+          <option>Other Nearby Area</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="fld">
+        <label>Medicines Needed (if no prescription)</label>
+        <textarea id="f-meds" placeholder="List medicine names, dosage, and quantity here…"></textarea>
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="fld">
+        <label>Upload Prescription (optional)</label>
+        <div class="upload-box" onclick="document.getElementById('f-file').click()">
+          <span style="font-size:28px">📋</span>
+          <p>Click to upload prescription image or PDF</p>
+          <p id="file-name" style="color:var(--saffron);font-weight:600;margin-top:6px"></p>
+          <input type="file" id="f-file" accept="image/*,.pdf" style="display:none" onchange="document.getElementById('file-name').textContent=this.files[0]?.name||''"/>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="fld">
+        <label>Preferred Delivery Time</label>
+        <select id="f-time">
+          <option>Morning (9am – 12pm)</option>
+          <option>Afternoon (12pm – 4pm)</option>
+          <option>Evening (4pm – 8pm)</option>
+          <option>Anytime</option>
+        </select>
+      </div>
+      <div class="fld">
+        <label>Order Type</label>
+        <select id="f-type">
+          <option>Home Delivery</option>
+          <option>Store Pickup</option>
+          <option>WhatsApp Order</option>
+        </select>
+      </div>
+    </div>
+    <button class="submit-btn" onclick="submitOrder()">
+      <i class="ti ti-send"></i>&nbsp; Submit Order Request
+    </button>
+    <div class="success-msg" id="success-msg">
+      🙏 நன்றி! We've received your request. Our pharmacist will call you on <strong>63792 51348</strong> shortly to confirm your order.
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-strip" id="contact">
+  <h2>Visit or Call Us</h2>
+  <div class="phone-highlight">📞 63792 51348</div>
+  <div class="contact-items">
+    <div class="c-item">
+      <i class="ti ti-map-pin"></i>
+      <span>38, 18, 2nd Main Rd,<br>Thillaiganga Nagar, Nanganallur,<br>Chennai – 600 061</span>
+    </div>
+    <div class="c-item">
+      <i class="ti ti-clock"></i>
+      <span>Mon–Sat: 8:00 AM – 9:30 PM<br>Sunday: 9:00 AM – 1:00 PM</span>
+    </div>
+    <div class="c-item">
+      <i class="ti ti-brand-whatsapp"></i>
+      <span>WhatsApp orders welcome<br>Send prescription on chat</span>
+    </div>
+  </div>
+  <a class="maps-btn" href="https://maps.google.com/?q=Sri+Karpagavinayaga+Pharmacy+Nanganallur+Chennai" target="_blank">
+    <i class="ti ti-map"></i>&nbsp; Open in Google Maps
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong>Sri Karpagavinayagar Pharmacy</strong><br>
+    38, 18, 2nd Main Road, Thillaiganga Nagar, Nanganallur, Chennai – 600 061, Tamil Nadu<br>
+    📞 63792 51348 &nbsp;|&nbsp; Licensed Retail Pharmacy &nbsp;|&nbsp; All medicines 100% genuine<br>
+    <span style="color:#555;font-size:11px">© 2025 Sri Karpagavinayagar Pharmacy. All rights reserved.</span>
+  </p>
+</footer>
+
+<script>
+function submitOrder(){
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const area = document.getElementById('f-area').value;
+  if(!name || !phone || !area){
+    alert('Please fill in your name, mobile number, and delivery area.');
+    return;
+  }
+  document.getElementById('success-msg').style.display = 'block';
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = '✓ Request Submitted';
+  btn.style.background = '#1B6B3A';
+  btn.disabled = true;
+  document.getElementById('success-msg').scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
